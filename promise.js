@@ -1,15 +1,13 @@
-function processAction(i, callback) {
+function sleepCallback(callback) {
   setTimeout(function () {
-    if (callback) callback("Processed Action " + i);
-  }, Math.random() * 5000);
+    if (callback) callback('sleep done');
+  }, 1000);
 }
-processAction(10, (result) => {
+
+sleepCallback(function (result) {
   console.log(result);
 });
 
-//function to code
-function triggerActions(count) {
-   
+function sleepPromise() {
+  // make sleepCallback a promise
 }
-
-// triggerActions(10);
